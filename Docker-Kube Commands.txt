@@ -1,0 +1,27 @@
+Docker :
+1. docker build -t <jar name> .
+2. docker images
+3. docker run -t <docker ip>:<local ip> .
+
+Remove images:
+docker rmi <image_number>
+
+Remove container:
+docker rm 
+
+Delete local images create repo on docker hub
+and push image.
+Pull image from there
+
+
+Google Kubernetes:
+
+1. From marketplace -> enable Google Kuberenetes Engine
+2. From Kubernetes -> create cluster
+3. Put name etc. -> configure cluster
+4. From Workload publish through terminal
+5. Upload .yaml file and then run the command below:
+
+		kubectl appy -f <yaml file name>
+6. In order to delete:
+		kubectl delete -f <yaml file name>
