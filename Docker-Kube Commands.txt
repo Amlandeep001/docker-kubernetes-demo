@@ -1,7 +1,14 @@
+install the app and create the jar.
 Docker :
-1. docker build -t <jar name> .
+1. docker build -t <jar name> . -> tag the jar into docker image.
 2. docker images
-3. docker run -t <docker ip>:<local ip> .
+3. docker run -p<docker ip>:<local ip> imagename
+or - with profile: 
+docker run -e "SPRING_PROFILES_ACTIVE=<env>" -p8092:8084 <imagename>
+
+docker build -t springboot-k8s-demo:1.0 .
+docker run -p8080:8080 springboot-k8s-demo
+
 
 Remove images:
 docker rmi <image_number>
@@ -25,3 +32,13 @@ Google Kubernetes:
 		kubectl appy -f <yaml file name>
 6. In order to delete:
 		kubectl delete -f <yaml file name>
+		
+Minikube:
+
+It is single node cluster
+Windows: https://medium.com/@javatechie/kubernetes-tutorial-setup-kubernetes-in-windows-run-spring-boot-application-on-k8s-cluster-c6cab8f7de5a
+
+Not using yaml:
+kubectl create deployment spring-boot-k8s --image=springboot-k8s-demo:1.0 --port=8080
+
+Mac: 
