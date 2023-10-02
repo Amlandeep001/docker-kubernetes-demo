@@ -11,5 +11,4 @@ public class MyController
 	{
 		return "sample docker app";
 	}
-
 }
