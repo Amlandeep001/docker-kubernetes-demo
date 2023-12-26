@@ -2,7 +2,7 @@ install the app and create the jar.
 Docker :
 1. docker build -t <jar name> . -> tag the jar into docker image.
 2. docker images
-3. docker run -p<docker ip>:<local ip> imagename
+3. docker run -p<docker port>:<local port> imagename
 or - with profile: 
 docker run -e "SPRING_PROFILES_ACTIVE=<env>" -p8092:8084 <imagename>
 
