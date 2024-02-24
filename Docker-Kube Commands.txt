@@ -9,6 +9,13 @@ docker run -e "SPRING_PROFILES_ACTIVE=<env>" -p8092:8084 <imagename>
 docker build -t springboot-k8s-demo:1.0 .
 docker run -p8080:8080 springboot-k8s-demo
 
+docker ps – This command is used to list all the running Docker container
+docker ps -a : It is used to show all containers(including stopped ones).
+The following command will only show you the stopped containers.
+
+docker ps -a | grep Exit
+
+Now your able to perform docker logs <container-id> on your container to see what is going wrong.
 
 Remove images:
 docker rmi <image_number>
