@@ -14,20 +14,53 @@ Adding name while running the container: docker run -d --name testso -p8092:8084
 docker build -t springboot-k8s-demo:1.0 .
 docker run -p8080:8080 springboot-k8s-demo
 
+4. List all the running Docker container
+-------------------------------------------------------------------------
 docker ps : This command is used to list all the running Docker container
 docker ps -a : It is used to show all containers(including stopped ones).
-The following command will only show you the stopped containers.
 
+The following command will only show you the stopped containers:
 docker ps --filter "status=exited" or docker ps -f "status=exited"
 
-Now your able to perform docker logs <container-id> on your container to see what is going wrong.
+5. Check logs:
+-------------------------------------------------------------------------
+docker logs <container-id>
 
-Remove images:
+6. Stop container:
+-------------------------------------------------------------------------
+docker stop <container-id>
+
+7. Start the container again:
+-------------------------------------------------------------------------
+docker start <container-id>
+
+8. Docker commit:
+-------------------------------------------------------------------------
+docker commit <container-id> new-image:tag
+
+9. Investigate docker container:
+-------------------------------------------------------------------------
+docker exec -it <container-id> /bin/bash
+
+10. Push images to docker hub:
+-------------------------------------------------------------------------
+-> login to docker-hub: docker login
+-> tag image: docker tag <image-name:version> username/<image-name:version>
+-> push image: docker push <username/image-name:version>
+
+11. Pull image from docker hub:
+-------------------------------------------------------------------------
+docker pull <username/image-name:version>
+
+12. Remove images:
+-------------------------------------------------------------------------
 docker rmi <image_number>
 
-Remove container:
+13. Remove container:
+-------------------------------------------------------------------------
 docker rm 
 
+N.B.
 Delete local images create repo on docker hub
 and push image.
 Pull image from there
