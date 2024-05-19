@@ -74,7 +74,7 @@ Google Kubernetes:
 4. From Workload publish through terminal
 5. Upload .yaml file and then run the command below:
 
-		kubectl appy -f <yaml file name>
+		kubectl apply -f <yaml file name>
 6. In order to delete:
 		kubectl delete -f <yaml file name>
 		
