@@ -7,12 +7,10 @@ or - with profile:
 docker run -e "SPRING_PROFILES_ACTIVE=<env>" -p8092:8084 <imagename>
 
 Docker run in detached mode: docker run -d -p8092:8084 <imagename>
-Logs from that running container: docker logs <container-id>
-Stop that docker container: docker stop <container-id>
 Adding name while running the container: docker run -d --name testso -p8092:8084 <imagename>
 
-docker build -t springboot-k8s-demo:1.0 .
-docker run -p8080:8080 springboot-k8s-demo
+example: docker build -t springboot-k8s-demo:1.0 .
+	 docker run -p8080:8080 springboot-k8s-demo
 
 4. List all the running Docker container
 -------------------------------------------------------------------------
