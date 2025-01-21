@@ -1,4 +1,4 @@
-FROM openjdk:17 as build
+FROM openjdk:21 as build
 
 EXPOSE 8080
 
