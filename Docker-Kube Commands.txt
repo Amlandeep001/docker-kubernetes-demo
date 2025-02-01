@@ -58,6 +58,10 @@ docker rmi <image_number>
 -------------------------------------------------------------------------
 docker rm 
 
+14. Docker Compose:
+-------------------------------------------------------------------------
+docker-compose up
+
 N.B.
 Delete local images create repo on docker hub
 and push image.
