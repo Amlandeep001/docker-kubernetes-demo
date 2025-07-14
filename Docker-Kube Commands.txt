@@ -62,6 +62,9 @@ docker rm <container-id>
 -------------------------------------------------------------------------
 docker-compose up
 
+Docker compose without blocking the terminal
+docker-compose up -d
+
 N.B.
 Delete local images create repo on docker hub
 and push image.
