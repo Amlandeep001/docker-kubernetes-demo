@@ -60,10 +60,14 @@ docker rm <container-id>
 
 14. Docker Compose:
 -------------------------------------------------------------------------
-docker-compose up
+docker compose up
 
 Docker compose without blocking the terminal
-docker-compose up -d
+docker compose up -d
+
+15. Docker Compose down:
+-------------------------------------------------------------------------
+docker compose down
 
 N.B.
 Delete local images create repo on docker hub
